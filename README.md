@@ -1,5 +1,5 @@
 # Quantum cat
-Another experiment to create beat detection algorithm in cables.gl
+Another experiment to create a beat detection algorithm in cables.gl
 
 ## Screenshot
 
