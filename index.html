@@ -42,14 +42,14 @@
     <canvas id="glcanvas" width="100vw" height="100vh" tabindex="1"></canvas>
 
     
-    <script type="text/javascript" src="js/patch.js" async></script>
+    <script type="text/javascript" src="patch.js" async></script>
     
 
     <script type="text/javascript">
 
-        function showError(errId, errMsg)
+        function showError(initiator,...args)
         {
-            // handle critical errors here if needed
+            CABLES.logErrorConsole("[" + initiator + "]", ...args);
         }
 
         function patchInitialized(patch)
@@ -67,8 +67,8 @@
             CABLES.patch = new CABLES.Patch({
                 patch: CABLES.exportedPatch,
                 "prefixAssetPath": "",
-                "assetPath": "assets/",
-                "jsPath": "js/",
+                "assetPath": "",
+                "jsPath": "",
                 "glCanvasId": "glcanvas",
                 "glCanvasResizeToWindow": true,
                 "onError": showError,
